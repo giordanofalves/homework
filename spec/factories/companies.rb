@@ -11,10 +11,10 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #
-class Company < ApplicationRecord
-  has_many :deals
-
-  validates :name, uniqueness: true
-  validates :name, :employee_count, :industry, presence: true
-  validates :employee_count, numericality: { only_integer: true, greater_than: 0 }
+FactoryBot.define do
+  factory :company do
+    name           { Faker::Company.name }
+    industry       { Faker::Company.industry }
+    employee_count { rand(10..1000) }
+  end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   namespace :api, constraints: { format: :json } do
     namespace :v1 do
@@ -5,7 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get '*path' => 'home#index', constraints: ->(request) { request.format == :html }
+  get "*path" => "home#index", constraints: ->(request) { request.format == :html }
 
-  root to: 'home#index'
+  root to: "home#index"
 end
