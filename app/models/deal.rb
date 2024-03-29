@@ -18,6 +18,6 @@ class Deal < ApplicationRecord
   enum status: { pending: 0, won: 1, lost: 2 }
 
   validates :name, :amount, presence: true
-  validates :amount, numericality: { only_integer: true, greater_than: 0 }
+  validates :amount, numericality: { greater_than: 0 }
   validates :company, presence: true
 end

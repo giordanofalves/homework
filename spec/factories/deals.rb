@@ -15,7 +15,7 @@
 FactoryBot.define do
   factory :deal do
     sequence(:name) { |n| "Deal #{n}" }
-    amount          { rand(10..1000) }
+    amount          { Faker::Number.decimal(l_digits: 2) }
     company
 
     traits_for_enum :status, Deal.statuses

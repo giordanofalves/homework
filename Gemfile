@@ -10,6 +10,7 @@ gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
+gem "kaminari"
 gem "pg", "~> 1.1"
 gem "puma"
 gem "sprockets-rails"

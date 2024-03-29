@@ -3,7 +3,11 @@
 Rails.application.routes.draw do
   namespace :api, constraints: { format: :json } do
     namespace :v1 do
-      resources :companies, only: [:index]
+      resources :companies, only: [:index] do
+        collection do
+          get :list_industries
+        end
+      end
     end
   end
 
