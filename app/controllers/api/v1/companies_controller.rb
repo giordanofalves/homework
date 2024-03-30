@@ -7,7 +7,7 @@ class Api::V1::CompaniesController < ApplicationController
     @companies = Company.filter(@filters)
                   .joins(:deals)
                   .group(:id)
-                  .order(created_at: :desc)
+                  .order(name: :asc)
                   .select(:id, :name, :industry, :employee_count, "sum(deals.amount) as deals_amount")
                   .page(params[:page])
 
