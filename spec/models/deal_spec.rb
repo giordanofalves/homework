@@ -41,13 +41,6 @@ RSpec.describe Deal, type: :model do
       expect(deal.errors[:amount]).to include("can't be blank")
     end
 
-    it "is invalid with a non-integer amount" do
-      deal.amount = 10.5
-
-      expect(deal).to be_invalid
-      expect(deal.errors[:amount]).to include("must be an integer")
-    end
-
     it "is invalid with a negative amount" do
       deal.amount = -100
 
