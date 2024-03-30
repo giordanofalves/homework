@@ -1,0 +1,8 @@
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+
+Layout/IndentationWidth:
+  Enabled: false
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: false
