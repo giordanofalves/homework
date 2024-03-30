@@ -6,7 +6,7 @@
 #
 #  id         :bigint           not null, primary key
 #  name       :string
-#  amount     :integer
+#  amount     :decimal(10, 2)
 #  status     :integer
 #  company_id :bigint           not null
 #  created_at :datetime         not null
